@@ -47,13 +47,11 @@ class TV:
     def getControl(self):
             return self._control
 
-
-    @classmethod
-    def getNumTV(cls):
-        return cls._numTV
-    @classmethod
-    def setNumTV(cls, numTV):
-        cls._numTV=numTV 
+    def getNumTV():
+        return TV.numTV
+    
+    def setNumTV(num):
+        TV.numTV=num
 
 
     def turnOn(self):
