@@ -1,5 +1,3 @@
-from televisores import tv
-
 class Control:
     def __init__(self, tv):
         self._tv = None
@@ -35,7 +33,7 @@ class Control:
 
     def setVolumen(self, volumen):
         self._tv.setVolumen(volumen)
-        
+
 
     def setTv(self, tv):
         self._tv = tv
