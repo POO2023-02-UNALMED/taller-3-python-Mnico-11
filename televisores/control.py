@@ -1,19 +1,16 @@
 class Control:
-    
-    def __init__(self, tv):
-        self._tv = None
 
-    def enlazar(self, tv):
-        self.setTv(tv)
-        tv.setControl(self)
+    def __init__(self):
+        self._tv = None
 
     def turnOn(self):
         self._tv.turnOn()
-
+    
     def turnOff(self):
         self._tv.turnOff()
+    
 
-
+    
     def canalUp(self):
         self._tv.canalUp()
 
@@ -21,22 +18,27 @@ class Control:
         self._tv.canalDown()
 
 
+    
     def volumenUp(self):
         self._tv.volumenUp()
-
+    
     def volumenDown(self):
         self._tv.volumenDown()
 
+    def setCanal(self,c):
+        self._tv.setCanal(c)
 
-    def setCanal(self, canal):
-        self._tv.setCanal(canal)
-
-    def setVolumen(self, volumen):
-        self._tv.setVolumen(volumen)
+    def setVolumen(self,v):
+        self._tv.setVolumen(v)
 
 
-    def setTv(self, tv):
-        self._tv = tv
+    def enlazar(self,tv1):
+        tv1.setControl(self)
+        self.setTv(tv1)
 
+    
     def getTv(self):
         return self._tv
+
+    def setTv(self,t):
+        self._tv=t
